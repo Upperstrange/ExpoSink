@@ -109,11 +109,7 @@
       "@react-native-community/datetimepicker",
       "@sentry/react-native",
       [
-        "llama.rn",
-        {
-          "forceCxx20": true,
-          // "enableOpenCL": false
-        }
+        "llama.rn"
       ]
     ],
     "experiments": {

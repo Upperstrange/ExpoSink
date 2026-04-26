@@ -34,11 +34,12 @@ jobs:
           pod repo update
           pod install
 
-      # 🏗 Build unsigned iOS dev client (Fixed Workspace/Scheme paths)
       - name: 🏗 Build unsigned iOS dev client
         shell: bash
         run: |
+          set -o pipefail
           cd ios
+
           xcodebuild \
             -workspace exposink.xcworkspace \
             -scheme exposink \
@@ -49,11 +50,6 @@ jobs:
             CODE_SIGN_STYLE=Manual \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            AD_HOC_CODE_SIGNING_ALLOWED=YES \
-            COMPILER_INDEX_STORE_ENABLE=NO \
-            CLANG_CXX_LANGUAGE_STANDARD="c++20" \
-            CLANG_CXX_LIBRARY="libc++" \
-            OTHER_CPLUSPLUSFLAGS="-DFORCE_CXX20" \
             build | tee build.log
 
       # 📦 Create unsigned IPA (Updated Path)
