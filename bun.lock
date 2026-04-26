@@ -58,7 +58,6 @@
         "expo-image-picker": "~55.0.19",
         "expo-intent-launcher": "~55.0.12",
         "expo-keep-awake": "~55.0.6",
-        "expo-libvlc-player": "^7.0.10",
         "expo-linear-gradient": "~55.0.13",
         "expo-linking": "~55.0.14",
         "expo-live-photo": "~55.0.13",
@@ -951,8 +950,6 @@
     "expo-json-utils": ["expo-json-utils@55.0.2", "", {}, "sha512-QJMOZOPOG7CTnKcrdVaiummn2va1MCO56z++eyWkDv3GBRODldM6MFMDf/jTREWthFc2Nxo6TuyWRrEV9S6n/Q=="],
 
     "expo-keep-awake": ["expo-keep-awake@55.0.6", "", { "peerDependencies": { "expo": "*", "react": "*" } }, "sha512-acJjeHqkNxMVckEcJhGQeIksqqsarscSHJtT559bNgyiM4r14dViQ66su7bb6qDVeBt0K7z3glXI1dHVck1Zgg=="],
-
-    "expo-libvlc-player": ["expo-libvlc-player@7.0.10", "", { "peerDependencies": { "expo": "*", "react": "*", "react-native": "*" } }, "sha512-MoydtYcGn0b3tSe+KwHidbQ2GanrMgNjqzZNjd3x3fqpQHrZzpMyJDPLxUKQxuKeZXHq2P7ulmfyrQJLSslO3g=="],
 
     "expo-linear-gradient": ["expo-linear-gradient@55.0.13", "", { "peerDependencies": { "expo": "*", "react": "*", "react-native": "*" } }, "sha512-Qz2T4jpkA15RIk29DBqI1TwW+8O9AN8MyC4TJPbh/5UnihH0yNNz3waplUO8Szh5OZ3czTGvtPQU4ysF3RDxwQ=="],
 

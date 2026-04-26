@@ -38,17 +38,10 @@ jobs:
       - name: 🏗 Build unsigned iOS dev client
         shell: bash
         run: |
-          set -o pipefail
           cd ios
-
-          # Manually set names to avoid shell globbing errors
-          # Expo prebuild always creates [slug].xcworkspace
-          WORKSPACE="exposink.xcworkspace"
-          SCHEME="exposink"
-
           xcodebuild \
-            -workspace "$WORKSPACE" \
-            -scheme "$SCHEME" \
+            -workspace exposink.xcworkspace \
+            -scheme exposink \
             -configuration Debug \
             -destination 'generic/platform=iOS' \
             -sdk iphoneos \
@@ -56,6 +49,8 @@ jobs:
             CODE_SIGN_STYLE=Manual \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES \
+            COMPILER_INDEX_STORE_ENABLE=NO \
             CLANG_CXX_LANGUAGE_STANDARD="c++20" \
             CLANG_CXX_LIBRARY="libc++" \
             OTHER_CPLUSPLUSFLAGS="-DFORCE_CXX20" \
